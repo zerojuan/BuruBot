@@ -1,27 +1,14 @@
 ﻿package 
 {
-	import flash.display.Sprite;
-	import flash.events.Event;
+	import org.flixel.FlxGame;
+	import burubot.PlayState;
 	
-	/**
-	 * ...
-	 * @author Julius
-	 */
-	public class Main extends Sprite 
-	{
-		
-		public function Main():void 
-		{
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
+	[SWF(width = "640", height = "480", backgroundColor = "#000000")]
+	public class Main extends FlxGame {
+		public function Main():void {
+			//super(320, 240, PlayState, 2, 0xffffff, false, 0xffffff, null, null, 0, 0);
+			super(640, 480, PlayState, 1);
 		}
-		
-		private function init(e:Event = null):void 
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
-		}
-		
 	}
 	
 }
